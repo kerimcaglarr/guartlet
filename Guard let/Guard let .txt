@@ -1,0 +1,69 @@
+
+
+import UIKit
+
+// if let kullanýmý  -- Optional ifadelerden kurtulmak için kullanýrýz
+
+// Json Parse iþlemi yaparken
+
+// if let yada guard let yapýsýný kullanacaðýz
+
+struct Uyeler {
+
+    var name:String?
+
+    var email:String?
+
+    var password:Int?
+
+}
+
+var uyem = Uyeler(name: "Kerim", email: "info@kerimcaglar.com", password: nil)
+
+//func uyeGetir(uye:Uyeler){
+
+//
+
+//    if let name = uye.name, let email = uye.email, let password = uye.password{
+
+//        print(name)
+
+//        print(email)
+
+//        print(password)
+
+//    } else{
+
+//        print("Verileriniz okunamadý")
+
+//    }
+
+//}
+
+// Guard yapýsý hatayý baþta yakalar
+
+func uyeGetir(uye:Uyeler){
+
+    
+
+    guard let name = uye.name, let email = uye.email, let password = uye.password else{
+
+        
+
+        print("Verileriniz okunamadý")
+
+        return
+
+    }
+
+    
+
+    print(name)
+
+    print(email)
+
+    print(password)
+
+}
+
+uyeGetir(uye: uyem)
